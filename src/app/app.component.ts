@@ -1,6 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { Component, HostBinding, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,7 @@ export class AppComponent {
   sidenav!: MatSidenav;
   isMobile = true;
   isCollapsed = true;
+  isDarkMode = false;
 
   constructor(private observer: BreakpointObserver) { }
 
@@ -25,5 +26,14 @@ export class AppComponent {
         this.isMobile = false;
       }
     });
+  }
+
+  @HostBinding('class')
+  get theme() {
+    return this.isDarkMode ? 'dark-theme' : 'light-theme';
+  }
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
   }
 }

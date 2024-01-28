@@ -4,6 +4,10 @@
       <mat-icon>menu</mat-icon>
     </button>
     <h1>Responsive Material Sidenavigation</h1>
+    <div class="flex-expand"></div>
+    <button mat-icon-button (click)="toggleTheme()">
+      <mat-icon>{{ isDarkMode ? 'light_mode' : 'dark_mode' }}</mat-icon>
+    </button>
   </mat-toolbar>
 </header>
 
