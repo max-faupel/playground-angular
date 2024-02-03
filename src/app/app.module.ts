@@ -14,9 +14,14 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TableComponent } from './navigation/table/table.component';
+import { NestedNavigationComponent } from './navigation/nested-navigation/nested-navigation.component';
+import { DashboardComponent } from './navigation/nested-navigation/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
-  declarations: [AppComponent, TableComponent, NavigationComponent],
+  declarations: [AppComponent, TableComponent, NavigationComponent, NestedNavigationComponent, DashboardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,6 +34,9 @@ import { TableComponent } from './navigation/table/table.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
