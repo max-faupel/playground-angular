@@ -9,18 +9,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { NavigationComponent } from './navigation/navigation.component';
+import { TableComponent } from './navigation/table/table.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TableComponent,
-    NavigationComponent
-  ],
+  declarations: [AppComponent, TableComponent, NavigationComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -32,9 +28,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     MatListModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
