@@ -1,8 +1,8 @@
-import { Component, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Component, ViewChild, inject } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { AsyncPipe, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-navigation',
@@ -11,6 +11,8 @@ import { AsyncPipe, NgIf } from '@angular/common';
 })
 export class NavigationComponent {
   private breakpointObserver = inject(BreakpointObserver);
+  @ViewChild(MatSidenav) sidenav!: MatSidenav;
+  isCollapsed = false;
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -18,4 +20,8 @@ export class NavigationComponent {
       map((result) => result.matches),
       shareReplay()
     );
+
+  toggleMenu() {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }
