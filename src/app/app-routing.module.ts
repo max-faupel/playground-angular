@@ -4,6 +4,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { TableComponent } from './navigation/table/table.component';
 import { NestedNavigationComponent } from './navigation/nested-navigation/nested-navigation.component';
 import { DashboardComponent } from './navigation/nested-navigation/dashboard/dashboard.component';
+import { DragDropComponent } from './navigation/drag-drop/drag-drop.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
       {
         path: 'table',
         component: TableComponent,
+      },
+      {
+        path: 'drag-drop',
+        component: DragDropComponent,
       },
       {
         path: 'nested-navigation',

@@ -19,9 +19,11 @@ import { DashboardComponent } from './navigation/nested-navigation/dashboard/das
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { DragDropComponent } from './navigation/drag-drop/drag-drop.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
-  declarations: [AppComponent, TableComponent, NavigationComponent, NestedNavigationComponent, DashboardComponent],
+  declarations: [AppComponent, TableComponent, NavigationComponent, NestedNavigationComponent, DashboardComponent, DragDropComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,6 +39,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

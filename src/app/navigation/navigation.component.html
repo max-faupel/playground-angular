@@ -22,6 +22,12 @@
           <span *ngIf="!isCollapsed">Nested Navigation</span>
         </span>
       </a>
+      <a mat-list-item routerLink="drag-drop">
+        <span class="entry">
+          <mat-icon>drag_indicator</mat-icon>
+          <span *ngIf="!isCollapsed">Drag Drop</span>
+        </span>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
