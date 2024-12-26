@@ -5,6 +5,7 @@ import { TableComponent } from './navigation/table/table.component';
 import { NestedNavigationComponent } from './navigation/nested-navigation/nested-navigation.component';
 import { DashboardComponent } from './navigation/nested-navigation/dashboard/dashboard.component';
 import { DragDropComponent } from './navigation/drag-drop/drag-drop.component';
+import { ScrollingComponent } from './navigation/scrolling/scrolling.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
       {
         path: 'drag-drop',
         component: DragDropComponent,
+      },
+      {
+        path: 'scrolling',
+        component: ScrollingComponent
       },
       {
         path: 'nested-navigation',
@@ -37,4 +42,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
